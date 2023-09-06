@@ -1,18 +1,235 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:background="@color/gray">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/red"
+                android:layout_gravity="top"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/white"
+                android:layout_gravity="center"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/red"
+                android:layout_gravity="bottom"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp">
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/white"
+                android:layout_gravity="top"/>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@color/red"
+                android:layout_gravity="bottom"/>
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp">
+
+            <FrameLayout
+                android:id="@+id/italy_green_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/green"
+                app:layout_constraintEnd_toStartOf="@+id/italy_white_2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <FrameLayout
+                android:id="@+id/italy_white_2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/italy_red_3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/italy_green_1" />
+
+            <FrameLayout
+                android:id="@+id/italy_red_3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/italy_white_2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp">
+
+            <FrameLayout
+                android:id="@+id/columbia_yellow_1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintVertical_weight="2"
+                android:background="@color/yellow"
+                app:layout_constraintBottom_toTopOf="@+id/columbia_blue_2"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="spread" />
+
+            <FrameLayout
+                android:id="@+id/columbia_blue_2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintVertical_weight="1"
+                android:background="@color/blue"
+                app:layout_constraintBottom_toTopOf="@+id/columbia_red_3"
+                app:layout_constraintTop_toBottomOf="@+id/columbia_yellow_1" />
+
+            <FrameLayout
+                android:id="@+id/columbia_red_3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintVertical_weight="1"
+                android:background="@color/red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/columbia_blue_2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp">
+
+            <FrameLayout
+                android:id="@+id/mad_white_1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_constraintEnd_toStartOf="@+id/mad_red_green"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_weight="1" />
+
+            <FrameLayout
+                android:id="@+id/mad_red_green"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/mad_white_1"
+                app:layout_constraintHorizontal_weight="2">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="top"
+                    android:background="@color/red" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_gravity="bottom"
+                    android:background="@color/green" />
+
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp"
+            android:background="@color/red">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="@color/white"
+                android:layout_gravity="center"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/purple"
+                android:layout_gravity="center"/>
+
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginBottom="50dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/red"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                app:layout_constraintHorizontal_bias="0.35"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:background="@color/red">
+            
+            <FrameLayout
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:background="@color/white"/>
+        </FrameLayout>
+
+    </LinearLayout>
+</ScrollView>

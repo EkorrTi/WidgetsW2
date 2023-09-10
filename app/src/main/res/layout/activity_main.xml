@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/clock_view"
         android:layout_width="300dp"
         android:layout_height="0dp"
         android:background="@drawable/ring_layer"
@@ -18,15 +18,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <View
-        android:id="@+id/sec_arrow"
-        android:layout_width="10dp"
-        android:layout_height="100dp"
-        android:layout_marginBottom="60dp"
-        android:background="@color/red"
-        app:layout_constraintBottom_toBottomOf="@+id/view"
-        app:layout_constraintEnd_toEndOf="@+id/view"
-        app:layout_constraintStart_toStartOf="@+id/view"
-        app:layout_constraintTop_toTopOf="@+id/view" />
+    <com.example.widgetsw2.ClockSecHand
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clock_view"
+        app:layout_constraintEnd_toEndOf="@+id/clock_view"
+        app:layout_constraintStart_toStartOf="@+id/clock_view"
+        app:layout_constraintTop_toTopOf="@id/clock_view" />
+
+    <com.example.widgetsw2.ClockMinHand
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clock_view"
+        app:layout_constraintEnd_toEndOf="@+id/clock_view"
+        app:layout_constraintStart_toStartOf="@+id/clock_view"
+        app:layout_constraintTop_toTopOf="@id/clock_view" />
+
+    <com.example.widgetsw2.ClockHourHand
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/clock_view"
+        app:layout_constraintEnd_toEndOf="@+id/clock_view"
+        app:layout_constraintStart_toStartOf="@+id/clock_view"
+        app:layout_constraintTop_toTopOf="@id/clock_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

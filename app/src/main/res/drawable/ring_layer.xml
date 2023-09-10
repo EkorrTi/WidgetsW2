@@ -84,6 +84,15 @@
         </rotate>
     </item>
 
+    <item
+        android:width="15dp"
+        android:height="15dp"
+        android:gravity="center">
+        <shape android:shape="oval">
+            <solid android:width="5dp" android:color="@color/black"/>
+        </shape>
+    </item>
+
 <!--    <item-->
 <!--        android:width="280dp"-->
 <!--        android:height="10dp"-->
